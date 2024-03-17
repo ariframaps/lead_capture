@@ -1,5 +1,7 @@
 $primary-color: #4285f4;
 $secondary-color: #ffffff;
+$gray-bg: #f3f4f6;
+$gray-border: rgb(187, 185, 185);
 $bg-color: #001726;
 $accent-color: #f0f7fe;
 $accent-color2: #1f6df1;
@@ -92,7 +94,7 @@ header {
                 width: fit-content;
                 padding: 10px 20px;
                 border-radius: 20px;
-                font-weight: bold;
+                // font-weight: bold;
                 margin-bottom: 10px;
             }
 
