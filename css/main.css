@@ -2,11 +2,11 @@
   padding: 0;
   margin: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  letter-spacing: 0.5px;
 }
 
 header {
   display: flex;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -55,4 +55,125 @@ header .other .contact:hover {
 header a {
   color: white;
   text-decoration: none;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-color: #001726;
+  color: white;
+  padding: 0 350px;
+}
+.hero .container {
+  display: flex;
+  padding-top: 100px;
+}
+.hero .container .left .subtitle1 {
+  background-color: rgba(128, 128, 128, 0.15);
+  border: 1px solid rgb(98, 98, 98);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.hero .container .left .title {
+  font-size: 4.5rem;
+}
+.hero .container .left .title span {
+  color: #1f6df1;
+}
+.hero .container .left .subtitle2 {
+  margin-block: 20px;
+  margin-bottom: 50px;
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+}
+.hero .container .left .trustpilot img {
+  height: 30px;
+  margin-bottom: 20px;
+}
+.hero .container .left .trustpilot span {
+  font-weight: bold;
+}
+.hero .container .right form {
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: black;
+  background-color: #ffffff;
+}
+.hero .container .right form .form-header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+}
+.hero .container .right form .form-header h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.hero .container .right form .identity {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  row-gap: 20px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+.hero .container .right form .identity .input input {
+  border: 1px solid rgba(128, 128, 128, 0.15);
+  background-color: rgba(183, 183, 183, 0.15);
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  width: 170px;
+}
+.hero .container .right form .identity .input input::-moz-placeholder {
+  color: rgb(187, 185, 185);
+}
+.hero .container .right form .identity .input input::placeholder {
+  color: rgb(187, 185, 185);
+}
+.hero .container .right form .identity .input input:focus {
+  outline: none;
+}
+.hero .container .right form .desc textarea {
+  border: 1px solid rgba(128, 128, 128, 0.15);
+  background-color: rgba(128, 128, 128, 0.15);
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  resize: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.hero .container .right form .desc textarea::-moz-placeholder {
+  color: rgb(187, 185, 185);
+}
+.hero .container .right form .desc textarea::placeholder {
+  color: rgb(187, 185, 185);
+}
+.hero .container .right form .desc textarea:focus {
+  outline: 0;
+}
+.hero .container .right form button {
+  width: 100%;
+  padding-block: 20px;
+  border: none;
+  background-color: #4285f4;
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.hero .container .right form button:hover {
+  background-color: #1f6df1;
 }/*# sourceMappingURL=main.css.map */
