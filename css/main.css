@@ -398,4 +398,63 @@ header a {
 }
 .features-cont .right button:hover {
   background-color: #1f6df1;
+}
+
+.whyus {
+  margin-inline: 260px;
+  margin-block: 94px;
+  padding-block: 80px;
+  background-color: #f0f7fe;
+  border-radius: 15px;
+}
+.whyus .header {
+  text-align: center;
+}
+.whyus .header h2 {
+  font-size: 3rem;
+}
+.whyus .header h2 span {
+  color: #1f6df1;
+}
+.whyus .header p {
+  margin-block: 40px;
+  color: #737373;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+}
+.whyus .cardbox {
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+.whyus .cardbox .card {
+  width: 373px;
+  height: 318px;
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.09);
+}
+.whyus .cardbox .card .image {
+  width: 56px;
+  height: 56px;
+  background-color: #f0f7fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.whyus .cardbox .card .image img {
+  height: 32px;
+}
+.whyus .cardbox .card h3 {
+  font-size: 1.5rem;
+  margin-block: 30px 10px;
+}
+.whyus .cardbox .card p {
+  line-height: 1.5rem;
+  color: rgb(138, 137, 137);
 }/*# sourceMappingURL=main.css.map */
