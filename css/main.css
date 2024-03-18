@@ -8,6 +8,7 @@
 header {
   display: flex;
   position: fixed;
+  z-index: 999;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -336,4 +337,65 @@ header a {
   position: relative;
   top: -530px;
   left: -330px;
+}
+
+.features-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 350px;
+  background-color: #001726;
+  gap: 70px;
+  padding-block: 100px;
+}
+.features-cont > * {
+  flex: 1;
+}
+.features-cont .left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.features-cont .left > * {
+  border-radius: 10px;
+}
+.features-cont .left img:nth-child(1) {
+  height: 185px;
+}
+.features-cont .left img:nth-child(2) {
+  height: 185px;
+}
+.features-cont .left img:nth-child(3) {
+  height: 308px;
+}
+.features-cont .right {
+  color: #ffffff;
+}
+.features-cont .right sub {
+  border-left: 2px solid #4285f4;
+  padding: 3px 10px;
+  letter-spacing: 1.5px;
+}
+.features-cont .right h2 {
+  font-size: 3rem;
+  margin-block: 25px;
+}
+.features-cont .right p {
+  color: rgb(212, 212, 212);
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+}
+.features-cont .right button {
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4285f4;
+  padding: 15px 40px;
+  color: white;
+  transition-duration: 0.3s;
+}
+.features-cont .right button:hover {
+  background-color: #1f6df1;
 }/*# sourceMappingURL=main.css.map */
