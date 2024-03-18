@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -179,7 +180,7 @@ header a {
 
 .product {
   padding-inline: 350px;
-  height: 105vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -269,4 +270,70 @@ header a {
 }
 .product .toggleable_tabs .contentbox .content .card .images .lone {
   height: 200px;
+}
+
+.features {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.features .container {
+  display: flex;
+  padding-inline: 350px;
+}
+.features .container * {
+  flex: 1;
+}
+.features .container .left sub {
+  border-left: 2px solid #4285f4;
+  padding: 3px 10px;
+  letter-spacing: 1.5px;
+}
+.features .container .left h2 {
+  font-size: 3rem;
+  margin-block: 25px;
+}
+.features .container .left p {
+  color: #737373;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+}
+.features .container .left ul {
+  list-style: none;
+  font-size: 1.2rem;
+}
+.features .container .left ul li {
+  margin-top: 50px;
+}
+.features .container .left ul li:before {
+  content: "✓";
+  color: #4285f4;
+  padding: 12px 16px;
+  background-color: #f0f7fe;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.features .container .right {
+  text-align: end;
+  padding: 12px;
+}
+.features .container .right > * {
+  border-radius: 10px;
+}
+.features .container .right img:nth-child(1) {
+  width: 390px;
+}
+.features .container .right img:nth-child(2) {
+  width: 312px;
+  box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: -270px;
+  left: -120px;
+}
+.features .container .right img:nth-child(3) {
+  width: 72px;
+  box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: -530px;
+  left: -330px;
 }/*# sourceMappingURL=main.css.map */
