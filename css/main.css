@@ -613,4 +613,73 @@ header a {
   width: 100%;
   height: 100%;
   background: linear-gradient(to right, #092333 3%, rgba(9, 35, 51, 0.1));
+}
+
+footer {
+  padding-inline: 350px;
+  padding-block: 84px;
+  background-color: #001726;
+  color: #ffffff;
+}
+footer li {
+  list-style-type: none;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+footer .header {
+  text-align: center;
+  border-bottom: 1px solid #737373;
+}
+footer .header img {
+  height: 33px;
+}
+footer .header .nav {
+  margin-block: 32px 64px;
+}
+footer .copyright {
+  margin-top: 30px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: #737373;
+}
+footer .copyright p a {
+  color: #1f6df1;
+}
+footer .copyright .other a {
+  color: #737373;
+}
+footer .copyright form input {
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  height: 48px;
+  width: 272px;
+  box-sizing: border-box;
+  padding: 15px;
+}
+footer .copyright form input:focus {
+  outline: none;
+}
+footer .copyright form button {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4285f4;
+  padding-inline: 30px;
+  height: 48px;
+  color: white;
+  transition-duration: 0.3s;
+}
+footer .copyright form button:hover {
+  background-color: #1f6df1;
 }/*# sourceMappingURL=main.css.map */
