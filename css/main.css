@@ -511,4 +511,44 @@ header a {
   width: 478px;
   position: absolute;
   right: 0;
+}
+
+.faq {
+  padding-inline: 350px;
+  padding-block: 94px;
+  background-color: #f0f7fe;
+}
+.faq .header {
+  text-align: center;
+}
+.faq .header sub {
+  border-left: 2px solid #4285f4;
+  padding: 3px 10px;
+  letter-spacing: 1.5px;
+}
+.faq .header h2 {
+  font-size: 3rem;
+  margin-block: 25px 60px;
+}
+.faq .faqbox ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+.faq .faqbox ul li {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 10px;
+  padding: 32px;
+  font-size: 1.5rem;
+  width: 840px;
+}
+.faq .faqbox ul li::after {
+  content: url("../images/icons8-plus-30.png");
+}
+.faq .faqbox ul li:hover {
+  color: #1f6df1;
 }/*# sourceMappingURL=main.css.map */

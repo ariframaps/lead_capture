@@ -624,3 +624,53 @@ header {
         }
     }
 }
+
+.faq {
+    padding-inline: 350px;
+    padding-block: 94px;
+    background-color: $accent-color;
+
+
+    .header {
+        text-align: center;
+
+        sub {
+            border-left: 2px solid $primary-color;
+            padding: 3px 10px;
+            letter-spacing: 1.5px;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-block: 25px 60px;
+        }
+    }
+
+    .faqbox {
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                background-color: white;
+                border-radius: 10px;
+                padding: 32px;
+                font-size: 1.5rem;
+                width: 840px;
+
+                &::after {
+                    content: url("../images/icons8-plus-30.png");
+                }
+
+                &:hover {
+                    color: $accent-color2
+                }
+            }
+        }
+    }
+}
