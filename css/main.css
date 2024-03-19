@@ -457,4 +457,58 @@ header a {
 .whyus .cardbox .card p {
   line-height: 1.5rem;
   color: rgb(138, 137, 137);
+}
+
+.testi {
+  padding-inline: 350px;
+  margin-block: 100px;
+}
+.testi .header {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.testi .header .logos {
+  display: flex;
+  justify-content: center;
+  margin-block: 20px 85px;
+}
+.testi .header .logos * {
+  height: 51px;
+}
+.testi .content {
+  display: flex;
+  justify-content: space-between;
+  height: 388px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.testi .content .carouselbox {
+  padding: 64px;
+}
+.testi .content .carouselbox .carousel .name {
+  font-size: 1.2rem;
+}
+.testi .content .carouselbox .carousel .job {
+  margin-block: 10px 30px;
+  color: #737373;
+}
+.testi .content .carouselbox .carousel .stars {
+  display: flex;
+  gap: 8px;
+}
+.testi .content .carouselbox .carousel .stars * {
+  height: 18px;
+}
+.testi .content .carouselbox .carousel .testimonies {
+  margin-block: 20px 30px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.testi .content .rightphoto {
+  width: 478px;
+  position: absolute;
+  right: 0;
 }/*# sourceMappingURL=main.css.map */
