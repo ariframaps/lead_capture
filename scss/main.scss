@@ -19,6 +19,18 @@ $text-color: #737373;
     transition: top 0.5s ease, opacity 0.5s ease;
 }
 
+.header-invert {
+    background-color: $secondary-color;
+
+    .logo {
+        filter: invert(1);
+    }
+
+    .invert {
+        color: $bg-color;
+    }
+}
+
 header {
     display: flex;
     position: fixed;
@@ -288,7 +300,7 @@ header {
                 }
             }
 
-            .active {
+            .active-tab {
                 box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
                 background-color: white;
                 color: $primary-color;
@@ -297,7 +309,7 @@ header {
 
         .contentbox {
             .content {
-                display: flex;
+                display: none;
                 gap: 30px;
 
                 .card {
@@ -342,6 +354,10 @@ header {
                     }
 
                 }
+            }
+
+            .active-content {
+                display: flex;
             }
         }
     }

@@ -11,6 +11,16 @@
   transition: top 0.5s ease, opacity 0.5s ease;
 }
 
+.header-invert {
+  background-color: #ffffff;
+}
+.header-invert .logo {
+  filter: invert(1);
+}
+.header-invert .invert {
+  color: #001726;
+}
+
 header {
   display: flex;
   position: fixed;
@@ -241,13 +251,13 @@ header a {
 .product .toggleable_tabs .tabbox .tab:hover {
   color: #4285f4;
 }
-.product .toggleable_tabs .tabbox .active {
+.product .toggleable_tabs .tabbox .active-tab {
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
   background-color: white;
   color: #4285f4;
 }
 .product .toggleable_tabs .contentbox .content {
-  display: flex;
+  display: none;
   gap: 30px;
 }
 .product .toggleable_tabs .contentbox .content .card {
@@ -284,6 +294,9 @@ header a {
 }
 .product .toggleable_tabs .contentbox .content .card .images .lone {
   height: 200px;
+}
+.product .toggleable_tabs .contentbox .active-content {
+  display: flex;
 }
 
 .features {

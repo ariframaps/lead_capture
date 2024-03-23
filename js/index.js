@@ -4,9 +4,9 @@ document.addEventListener('scroll', function (e) {
     const header = document.getElementById('page-header');
     const currentPosition = window.scrollY;
 
-    (window.scrollY > 0) ?
-        changeHeader(header, "invert(1)", "white", "black") :
-        changeHeader(header, "invert(0)", "none", "white");
+    (currentPosition > 0) ?
+        header.classList.add('header-invert') :
+        header.classList.remove('header-invert');
 
     (currentPosition > lastPosition) ?
         header.classList.add('header-hidden') :
@@ -14,21 +14,25 @@ document.addEventListener('scroll', function (e) {
     lastPosition = currentPosition;
 });
 
-function changeHeader(header, filter, bg, color) {
-    const logo = document.querySelector('.logo');
-    logo.style.filter = filter
-    header.style.background = bg;
-    document.querySelectorAll('.invert')
-        .forEach(function (element) {
-            element.style.color = color;
-        })
-}
-
 // toggleable tabs
 const tabbox = document.querySelector(".tabbox");
 tabbox.addEventListener("click", function (e) {
-    for (let i = 0; i < this.children.length; i++) {
-        this.children[i].classList.remove('active')
-    }
-    e.target.classList.add('active')
+    const targetTab = changeTab(this.children, e.target)
+    changeContent(targetTab)
 })
+
+function changeTab(tabs, target) {
+    let targetIndex = 0
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active-tab');
+        if (tabs[i] == target) targetIndex = i;
+    }
+    target.classList.add('active-tab')
+    return targetIndex;
+}
+
+function changeContent(targetIndex) {
+    const contentbox = Array.from(document.querySelector('.contentbox').children);
+    contentbox.forEach(content => content.classList.remove('active-content'));
+    contentbox[targetIndex].classList.add('active-content');
+}
