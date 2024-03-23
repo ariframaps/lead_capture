@@ -1,5 +1,5 @@
+// header
 let lastPosition = window.scrollY;
-
 document.addEventListener('scroll', function (e) {
     const header = document.getElementById('page-header');
     const currentPosition = window.scrollY;
@@ -23,3 +23,12 @@ function changeHeader(header, filter, bg, color) {
             element.style.color = color;
         })
 }
+
+// toggleable tabs
+const tabbox = document.querySelector(".tabbox");
+tabbox.addEventListener("click", function (e) {
+    for (let i = 0; i < this.children.length; i++) {
+        this.children[i].classList.remove('active')
+    }
+    e.target.classList.add('active')
+})

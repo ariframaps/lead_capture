@@ -281,6 +281,11 @@ header {
                 font-weight: bold;
                 font-size: 1.1rem;
                 background-color: transparent;
+                transition-duration: .2s;
+
+                &:hover {
+                    color: $primary-color;
+                }
             }
 
             .active {
