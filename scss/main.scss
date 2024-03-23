@@ -13,6 +13,12 @@ $text-color: #737373;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.header-hidden {
+    display: none;
+    top: -100px;
+    opacity: 0;
+}
+
 header {
     display: flex;
     position: fixed;
@@ -20,10 +26,10 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: $bg-color;
     font-weight: bold;
     padding: 20px 350px;
     box-sizing: border-box;
+    box-shadow: 0 -25px 50px rgba(0, 0, 0, 0.7);
 
     img {
         height: 35px;
@@ -41,6 +47,7 @@ header {
             padding: 10px;
             border-radius: 5px;
             transition-duration: .3s;
+            // color: black;
 
             &:hover {
                 color: $accent-color2;
