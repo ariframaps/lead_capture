@@ -6,14 +6,16 @@
 }
 
 .header-hidden {
-  display: none;
   top: -100px;
   opacity: 0;
+  transition: top 0.5s ease, opacity 0.5s ease;
 }
 
 header {
   display: flex;
   position: fixed;
+  top: 0;
+  opacity: 100%;
   z-index: 999;
   justify-content: space-between;
   align-items: center;
@@ -22,6 +24,7 @@ header {
   padding: 20px 350px;
   box-sizing: border-box;
   box-shadow: 0 -25px 50px rgba(0, 0, 0, 0.7);
+  transition: top 0.5s ease, opacity 0.5s ease;
 }
 header img {
   height: 35px;
