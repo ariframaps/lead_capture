@@ -36,3 +36,21 @@ function changeContent(targetIndex) {
     contentbox.forEach(content => content.classList.remove('active-content'));
     contentbox[targetIndex].classList.add('active-content');
 }
+
+// testimoni
+
+// membuat simpanan konten2nya menggunakan array atau semacamnya
+// mengambil elemen carouselbox
+// buat array 2 isinya elemen untuk konten yang akan ditampilkan
+// tunggu 2 detik
+// dikanan carousel spawn next konten
+// geser kekiri (next konten)
+// elemen 1 hilang, elemen 2 menjadi elemen 1, dna spawn index ke-2 isinhya adalah konten selanjutnya
+// next konten lagi
+// gitu terus loopnya
+
+
+// const carouselbox = document.querySelector('.carouselbox');
+// setInterval(function () {
+//     carouselbox.firstChild
+// }, 2000)

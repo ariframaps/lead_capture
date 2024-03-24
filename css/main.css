@@ -512,6 +512,13 @@ header a {
 }
 .testi .content .carouselbox {
   padding: 64px;
+  overflow: hidden;
+}
+.testi .content .carouselbox .carousel {
+  position: relative;
+  background-color: salmon;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .testi .content .carouselbox .carousel .name {
   font-size: 1.2rem;

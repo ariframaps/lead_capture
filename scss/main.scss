@@ -621,8 +621,15 @@ header {
 
         .carouselbox {
             padding: 64px;
+            overflow: hidden;
+            // background-color: skyblue;
+            // width: 800px;
 
             .carousel {
+                position: relative;
+                background-color: salmon;
+                width: fit-content;
+
                 .name {
                     font-size: 1.2rem;
                 }
