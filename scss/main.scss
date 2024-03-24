@@ -13,29 +13,12 @@ $text-color: #737373;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.header-hidden {
-    top: -100px;
-    opacity: 0;
-    transition: top 0.5s ease, opacity 0.5s ease;
-}
-
-.header-invert {
-    background-color: $secondary-color;
-
-    .logo {
-        filter: invert(1);
-    }
-
-    .invert {
-        color: $bg-color;
-    }
-}
-
 header {
     display: flex;
     position: fixed;
     top: 0;
     opacity: 100%;
+    background-color: transparent;
     z-index: 999;
     justify-content: space-between;
     align-items: center;
@@ -44,7 +27,25 @@ header {
     padding: 20px 350px;
     box-sizing: border-box;
     box-shadow: 0 -25px 50px rgba(0, 0, 0, 0.7);
-    transition: top 0.5s ease, opacity 0.5s ease;
+    transition: top 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
+
+    &.header-hidden {
+        top: -100px;
+        opacity: 0;
+        transition: top 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
+    }
+
+    &.header-invert {
+        background-color: $secondary-color;
+
+        .logo {
+            filter: invert(1);
+        }
+
+        .invert {
+            color: $bg-color;
+        }
+    }
 
     img {
         height: 35px;
