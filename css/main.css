@@ -512,13 +512,18 @@ header a {
 }
 .testi .content .carouselbox {
   padding: 64px;
-  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  width: 800px;
 }
 .testi .content .carouselbox .carousel {
   position: relative;
-  background-color: salmon;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 600px;
+  flex: 0 0 600px;
+  left: 0px;
+  margin-right: 100px;
+  transition: left 1s ease;
 }
 .testi .content .carouselbox .carousel .name {
   font-size: 1.2rem;
@@ -538,6 +543,10 @@ header a {
   margin-block: 20px 30px;
   font-size: 1.5rem;
   line-height: 2rem;
+}
+.testi .content .carouselbox .child1 {
+  position: absolute;
+  left: 64px;
 }
 .testi .content .rightphoto {
   width: 478px;
