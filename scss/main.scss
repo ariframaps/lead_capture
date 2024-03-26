@@ -678,9 +678,6 @@ header {
     padding-block: 94px;
     padding-bottom: 400px;
     background-color: $accent-color;
-    position: relative;
-    // z-index: 5   ;
-
 
     .header {
         text-align: center;
@@ -708,7 +705,6 @@ header {
             gap: 24px;
             align-items: center;
             width: 840px;
-            // height: 800px;
             background-color: $accent-color;
 
             li {
@@ -716,13 +712,11 @@ header {
                 border-radius: 10px;
                 box-sizing: border-box;
                 position: relative;
-                // z-index: 6;
                 width: 100%;
                 transition-duration: .5s;
 
                 &:hover {
                     padding-bottom: 90px;
-
                 }
 
                 .question {

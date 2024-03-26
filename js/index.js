@@ -104,6 +104,3 @@ function renderContent(index, data) {
 
     return carousel;
 }
-
-
-// faqs
