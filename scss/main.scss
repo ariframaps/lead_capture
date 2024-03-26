@@ -698,12 +698,16 @@ header {
     }
 
     .faqbox {
+        display: flex;
+        justify-content: center;
+
         ul {
             list-style: none;
             display: flex;
             flex-direction: column;
             gap: 24px;
             align-items: center;
+            width: 840px;
 
             li {
                 display: flex;
@@ -712,7 +716,8 @@ header {
                 border-radius: 10px;
                 padding: 32px;
                 font-size: 1.5rem;
-                width: 840px;
+                width: 100%;
+                box-sizing: border-box;
 
                 &::after {
                     content: url("../images/icons8-plus-30.png");

@@ -574,12 +574,17 @@ header a {
   font-size: 3rem;
   margin-block: 25px 60px;
 }
+.faq .faqbox {
+  display: flex;
+  justify-content: center;
+}
 .faq .faqbox ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 24px;
   align-items: center;
+  width: 840px;
 }
 .faq .faqbox ul li {
   display: flex;
@@ -588,7 +593,8 @@ header a {
   border-radius: 10px;
   padding: 32px;
   font-size: 1.5rem;
-  width: 840px;
+  width: 100%;
+  box-sizing: border-box;
 }
 .faq .faqbox ul li::after {
   content: url("../images/icons8-plus-30.png");

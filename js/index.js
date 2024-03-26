@@ -1,8 +1,13 @@
-// header
 let lastPosition = window.scrollY;
+const header = document.getElementById('page-header');
+const carouselbox = document.querySelector('.carouselbox');
+let left = 0;
+let index = 1;
+
+// header
 document.addEventListener('scroll', function (e) {
-    const header = document.getElementById('page-header');
     const currentPosition = window.scrollY;
+    console.log(currentPosition);
 
     (currentPosition > 0) ?
         header.classList.add('header-invert') :
@@ -37,17 +42,8 @@ function changeContent(targetIndex) {
     contentbox[targetIndex].classList.add('active-content');
 }
 
-// testimoni
-
-// membuat simpanan konten2nya menggunakan array atau semacamnya
-// mengambil elemen carouselbox
-// buat array 2 isinya elemen untuk konten yang akan ditampilkan
-// tunggu 2 detik
-// dikanan carousel append next konten
-// geser kekiri (next konten)
-// elemen 1 hilang, elemen 2 menjadi elemen 1, dna spawn index ke-2 isinhya adalah konten selanjutnya
-// next konten lagi
-// gitu terus loopnya
+// carousel
+setInterval(swipeContent, 3500);
 
 const carsouselData = [
     {
@@ -65,14 +61,10 @@ const carsouselData = [
         job: "Freelancer",
         caption: `I was pleasantly surprised to recieve a response so <br>quickly, and the terms of the loan were very<br>reasonable.`
     },
-]
+];
 
-const carouselbox = document.querySelector('.carouselbox');
-let left = 0;
-let index = 1;
-
-setInterval(function () {
-    carouselbox.append(renderContent(index));
+function swipeContent() {
+    carouselbox.append(renderContent(index, carsouselData));
     (index == 2) ? index = 0 : index++;
 
     const carousel = document.querySelectorAll(".carousel");
@@ -82,17 +74,16 @@ setInterval(function () {
             item.style.left = `${left}px`
         });
     }, 100);
-}, 3500)
+}
 
-
-function renderContent(index) {
+function renderContent(index, data) {
     const name = document.createElement('p');
     name.className = 'name';
-    name.innerHTML = `${carsouselData[index].name}`
+    name.innerHTML = data[index].name
 
     const job = document.createElement('p');
     job.className = 'job';
-    job.innerHTML = `${carsouselData[index].job}`
+    job.innerHTML = data[index].job
 
     const stars = document.createElement('div');
     stars.className = 'stars';
@@ -104,7 +95,7 @@ function renderContent(index) {
 
     const testimonies = document.createElement('p');
     testimonies.className = 'testimonies';
-    testimonies.innerHTML = carsouselData[index].caption;
+    testimonies.innerHTML = data[index].caption;
 
     const carousel = document.createElement('div');
     carousel.className = 'carousel';
