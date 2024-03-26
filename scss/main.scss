@@ -679,7 +679,7 @@ header {
     padding-bottom: 400px;
     background-color: $accent-color;
     position: relative;
-    z-index: 5;
+    // z-index: 5   ;
 
 
     .header {
@@ -708,23 +708,67 @@ header {
             gap: 24px;
             align-items: center;
             width: 840px;
+            // height: 800px;
+            background-color: $accent-color;
 
             li {
-                display: flex;
-                justify-content: space-between;
                 background-color: white;
                 border-radius: 10px;
-                padding: 32px;
-                font-size: 1.5rem;
-                width: 100%;
                 box-sizing: border-box;
-
-                &::after {
-                    content: url("../images/icons8-plus-30.png");
-                }
+                position: relative;
+                // z-index: 6;
+                width: 100%;
+                transition-duration: .5s;
 
                 &:hover {
-                    color: $accent-color2
+                    padding-bottom: 90px;
+
+                }
+
+                .question {
+                    border-radius: 10px;
+                    background-color: white;
+                    padding: 32px;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 1.5rem;
+                    position: relative;
+                    z-index: 6;
+
+                    &::after {
+                        content: url("../images/icons8-plus-30.png");
+                    }
+
+                    &:hover {
+                        color: $accent-color2;
+                        cursor: pointer;
+                    }
+                }
+
+                .cover {
+                    background-color: $accent-color;
+                    position: absolute;
+                    z-index: 6;
+                    left: 0;
+                    right: 0;
+                    bottom: -30px;
+                    height: 30px;
+                }
+
+                .cover-btm {
+                    bottom: -60px;
+                    height: 60px;
+                }
+
+                .answer {
+                    padding: 32px;
+                    padding-top: 0;
+                    line-height: 2rem;
+                    font-size: 1.3rem;
+                    color: $text-color;
+                    position: absolute;
+                    top: 100px;
+                    z-index: 5;
                 }
             }
         }

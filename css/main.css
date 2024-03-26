@@ -560,7 +560,6 @@ header a {
   padding-bottom: 400px;
   background-color: #f0f7fe;
   position: relative;
-  z-index: 5;
 }
 .faq .header {
   text-align: center;
@@ -585,22 +584,58 @@ header a {
   gap: 24px;
   align-items: center;
   width: 840px;
+  background-color: #f0f7fe;
 }
 .faq .faqbox ul li {
-  display: flex;
-  justify-content: space-between;
   background-color: white;
   border-radius: 10px;
-  padding: 32px;
-  font-size: 1.5rem;
-  width: 100%;
   box-sizing: border-box;
-}
-.faq .faqbox ul li::after {
-  content: url("../images/icons8-plus-30.png");
+  position: relative;
+  width: 100%;
+  transition-duration: 0.5s;
 }
 .faq .faqbox ul li:hover {
+  padding-bottom: 90px;
+}
+.faq .faqbox ul li .question {
+  border-radius: 10px;
+  background-color: white;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 6;
+}
+.faq .faqbox ul li .question::after {
+  content: url("../images/icons8-plus-30.png");
+}
+.faq .faqbox ul li .question:hover {
   color: #1f6df1;
+  cursor: pointer;
+}
+.faq .faqbox ul li .cover {
+  background-color: #f0f7fe;
+  position: absolute;
+  z-index: 6;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  height: 30px;
+}
+.faq .faqbox ul li .cover-btm {
+  bottom: -60px;
+  height: 60px;
+}
+.faq .faqbox ul li .answer {
+  padding: 32px;
+  padding-top: 0;
+  line-height: 2rem;
+  font-size: 1.3rem;
+  color: #737373;
+  position: absolute;
+  top: 100px;
+  z-index: 5;
 }
 
 .cta {
