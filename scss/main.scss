@@ -678,6 +678,7 @@ header {
     padding-block: 94px;
     padding-bottom: 400px;
     background-color: $accent-color;
+    position: relative;
 
     .header {
         text-align: center;
@@ -816,7 +817,6 @@ header {
         }
 
         .right {
-            // height: 423px;
             position: relative;
             display: inline-block;
 
