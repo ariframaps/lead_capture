@@ -1,0 +1,85 @@
+@use 'modules/mixin' as mixin;
+@use 'modules/color' as color;
+
+.testi {
+    padding-inline: 350px;
+    margin-block: 100px;
+
+    .header {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            margin-block: 20px 85px;
+
+            & * {
+                height: 51px;
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        height: 388px;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.1);
+        position: relative;
+
+        .carouselbox {
+            padding: 64px;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            width: 800px;
+
+            .carousel {
+                position: relative;
+                width: 600px;
+                flex: 0 0 600px;
+                left: 0px;
+                margin-right: 100px;
+                transition: left 1s ease;
+
+                .name {
+                    font-size: 1.2rem;
+                }
+
+                .job {
+                    margin-block: 10px 30px;
+                    color: color.$text-color;
+                }
+
+                .stars {
+                    display: flex;
+                    gap: 8px;
+
+                    & * {
+                        height: 18px;
+                    }
+                }
+
+                .testimonies {
+                    margin-block: 20px 30px;
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
+            }
+
+            .child1 {
+                position: absolute;
+                left: 64px;
+            }
+        }
+
+        .rightphoto {
+            width: 478px;
+            position: absolute;
+            right: 0;
+        }
+    }
+}

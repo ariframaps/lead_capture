@@ -1,0 +1,50 @@
+@use 'modules/mixin' as mixin;
+@use 'modules/color' as color;
+
+.features-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 350px;
+    background-color: color.$bg-color;
+    gap: 70px;
+    padding-block: 100px;
+
+    &>* {
+        flex: 1;
+    }
+
+    .left {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+
+        &>* {
+            border-radius: 10px;
+        }
+
+        img:nth-child(1) {
+            height: 185px;
+        }
+
+        img:nth-child(2) {
+            height: 185px;
+        }
+
+        img:nth-child(3) {
+            height: 308px;
+        }
+    }
+
+    @include mixin.article-header();
+
+    .right {
+        color: color.$secondary-color;
+
+        p {
+            color: rgb(212, 212, 212);
+        }
+
+        @include mixin.button-style(15px 40px, 40px, inherit, inherit);
+    }
+}

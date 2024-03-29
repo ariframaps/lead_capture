@@ -1,0 +1,90 @@
+@use 'modules/mixin' as mixin;
+@use 'modules/color' as color;
+
+.faq {
+    padding-inline: 350px;
+    padding-block: 94px;
+    padding-bottom: 400px;
+    background-color: color.$accent-color;
+    position: relative;
+
+    @include mixin.article-header(center);
+
+    .header {
+        margin-bottom: 60px;
+    }
+
+    .faqbox {
+        display: flex;
+        justify-content: center;
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+            width: 840px;
+            background-color: color.$accent-color;
+
+            li {
+                background-color: white;
+                border-radius: 10px;
+                box-sizing: border-box;
+                position: relative;
+                width: 100%;
+                transition-duration: .5s;
+
+                &:hover {
+                    padding-bottom: 90px;
+                }
+
+                .question {
+                    border-radius: 10px;
+                    background-color: white;
+                    padding: 32px;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 1.5rem;
+                    position: relative;
+                    z-index: 6;
+
+                    &::after {
+                        content: url("../images/icons8-plus-30.png");
+                    }
+
+                    &:hover {
+                        color: color.$accent-color2;
+                        cursor: pointer;
+                    }
+                }
+
+                .cover {
+                    background-color: color.$accent-color;
+                    position: absolute;
+                    z-index: 6;
+                    left: 0;
+                    right: 0;
+                    bottom: -30px;
+                    height: 30px;
+                }
+
+                .cover-btm {
+                    bottom: -60px;
+                    height: 60px;
+                }
+
+                .answer {
+                    padding: 32px;
+                    padding-top: 0;
+                    line-height: 2rem;
+                    font-size: 1.3rem;
+                    color: color.$text-color;
+                    position: absolute;
+                    top: 100px;
+                    z-index: 5;
+                }
+            }
+        }
+    }
+}

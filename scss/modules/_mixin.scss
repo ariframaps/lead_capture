@@ -1,0 +1,48 @@
+@use 'color' as color;
+
+@mixin article-header($align: start) {
+    .header {
+        text-align: $align;
+
+        sub {
+            border-left: 2px solid color.$primary-color;
+            padding: 3px 10px;
+            letter-spacing: 1.5px;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-block: 25px;
+
+            span {
+                color: color.$accent-color2;
+            }
+        }
+
+        p {
+            color: color.$text-color;
+            line-height: 1.8rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@mixin button-style ($padding: 15px 40px, $margin-top: 0px, $width: inherit, $height: inherit) {
+    button {
+        margin-top: $margin-top;
+        font-weight: bold;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        background-color: color.$primary-color;
+        padding: $padding;
+        color: white;
+        transition-duration: .3s;
+        height: $height;
+        width: $width;
+
+        &:hover {
+            background-color: color.$accent-color2;
+        }
+    }
+}

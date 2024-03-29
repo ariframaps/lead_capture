@@ -1,0 +1,129 @@
+@use 'color' as color;
+@use 'mixin' as mixin;
+
+.hero {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: color.$bg-color;
+    color: white;
+    padding: 0 350px;
+
+    .container {
+        display: flex;
+        padding-top: 100px;
+
+        .left {
+            .subtitle1 {
+                background-color: rgba(gray, $alpha: .15);
+                border: 1px solid color.$gray-border;
+                width: fit-content;
+                padding: 10px 20px;
+                border-radius: 20px;
+                margin-bottom: 10px;
+            }
+
+            .title {
+                font-size: 4.5rem;
+
+                span {
+                    color: color.$accent-color2;
+                }
+            }
+
+            .subtitle2 {
+                margin-block: 20px;
+                margin-bottom: 50px;
+                line-height: 1.6rem;
+                font-size: 1.2rem;
+            }
+
+            .trustpilot {
+                img {
+                    height: 30px;
+                    margin-bottom: 20px;
+                }
+
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .right {
+            form {
+                border-radius: 15px;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                color: black;
+                background-color: color.$secondary-color;
+
+                .form-header {
+                    text-align: center;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid color.$gray-bg;
+
+                    h3 {
+                        font-size: 1.4rem;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .identity {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    flex-wrap: wrap;
+                    row-gap: 20px;
+                    column-gap: 15px;
+
+                    .input {
+                        input {
+                            border: 1px solid color.$gray-border;
+                            background-color: color.$gray-bg;
+                            padding: 15px;
+                            border-radius: 5px;
+                            font-size: 1.1rem;
+                            margin-top: 10px;
+                            width: 170px;
+
+                            &::placeholder {
+                                color: rgb(187, 185, 185)
+                            }
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+
+                .desc {
+                    textarea {
+                        border: 1px solid rgba(gray, $alpha: .15);
+                        background-color: rgba(gray, $alpha: .15);
+                        padding: 10px;
+                        border-radius: 5px;
+                        width: 100%;
+                        resize: none;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                        font-size: 1.1rem;
+                        box-sizing: border-box;
+                        margin-top: 10px;
+
+                        &::placeholder {
+                            color: rgb(187, 185, 185)
+                        }
+
+                        &:focus {
+                            outline: 0;
+                        }
+                    }
+                }
+
+                @include mixin.button-style(20px, inherit, 100%, inherit);
+            }
+        }
+    }
+}

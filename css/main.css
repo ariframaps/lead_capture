@@ -1,10 +1,4 @@
 @charset "UTF-8";
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-
 header {
   display: flex;
   position: fixed;
@@ -45,12 +39,12 @@ header nav {
 header nav li {
   list-style: none;
 }
-header nav a {
+header nav li a {
   padding: 10px;
   border-radius: 5px;
   transition-duration: 0.3s;
 }
-header nav a:hover {
+header nav li a:hover, header nav li a.invert:hover {
   color: #1f6df1;
   background-color: rgba(240, 247, 254, 0.05);
 }
@@ -207,6 +201,12 @@ header a {
 }
 .hero .container .right form button:hover {
   background-color: #1f6df1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 .product {
