@@ -63,14 +63,24 @@ header .other .support:hover {
   color: #1f6df1;
   transition-duration: 0.3s;
 }
-header .other .contact {
+header .other button {
+  margin-top: inherit;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
   background-color: #4285f4;
   padding: 15px 30px;
-  border-radius: 5px;
+  color: white;
   transition-duration: 0.3s;
+  height: inherit;
+  width: inherit;
 }
-header .other .contact:hover {
+header .other button:hover {
   background-color: #1f6df1;
+}
+header .other .contact {
+  font-size: 1rem;
 }
 header a {
   color: white;
@@ -183,15 +193,17 @@ header a {
   outline: 0;
 }
 .hero .container .right form button {
-  width: 100%;
-  padding-block: 20px;
+  margin-top: inherit;
+  font-weight: bold;
+  font-size: 1.2rem;
   border: none;
+  border-radius: 5px;
   background-color: #4285f4;
+  padding: 20px;
   color: white;
   transition-duration: 0.3s;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 5px;
+  height: inherit;
+  width: 100%;
 }
 .hero .container .right form button:hover {
   background-color: #1f6df1;
@@ -249,6 +261,7 @@ header a {
 }
 .product .toggleable_tabs .tabbox .tab:hover {
   color: #4285f4;
+  cursor: pointer;
 }
 .product .toggleable_tabs .tabbox .active-tab {
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
@@ -310,16 +323,22 @@ header a {
 .features .container * {
   flex: 1;
 }
-.features .container .left sub {
+.features .container .header {
+  text-align: start;
+}
+.features .container .header sub {
   border-left: 2px solid #4285f4;
   padding: 3px 10px;
   letter-spacing: 1.5px;
 }
-.features .container .left h2 {
+.features .container .header h2 {
   font-size: 3rem;
   margin-block: 25px;
 }
-.features .container .left p {
+.features .container .header h2 span {
+  color: #1f6df1;
+}
+.features .container .header p {
   color: #737373;
   line-height: 1.8rem;
   font-size: 1.2rem;
@@ -393,22 +412,31 @@ header a {
 .features-cont .left img:nth-child(3) {
   height: 308px;
 }
-.features-cont .right {
-  color: #ffffff;
+.features-cont .header {
+  text-align: start;
 }
-.features-cont .right sub {
+.features-cont .header sub {
   border-left: 2px solid #4285f4;
   padding: 3px 10px;
   letter-spacing: 1.5px;
 }
-.features-cont .right h2 {
+.features-cont .header h2 {
   font-size: 3rem;
   margin-block: 25px;
 }
-.features-cont .right p {
-  color: rgb(212, 212, 212);
+.features-cont .header h2 span {
+  color: #1f6df1;
+}
+.features-cont .header p {
+  color: #737373;
   line-height: 1.8rem;
   font-size: 1.2rem;
+}
+.features-cont .right {
+  color: #ffffff;
+}
+.features-cont .right p {
+  color: rgb(212, 212, 212);
 }
 .features-cont .right button {
   margin-top: 40px;
@@ -420,6 +448,8 @@ header a {
   padding: 15px 40px;
   color: white;
   transition-duration: 0.3s;
+  height: inherit;
+  width: inherit;
 }
 .features-cont .right button:hover {
   background-color: #1f6df1;
@@ -435,14 +465,19 @@ header a {
 .whyus .header {
   text-align: center;
 }
+.whyus .header sub {
+  border-left: 2px solid #4285f4;
+  padding: 3px 10px;
+  letter-spacing: 1.5px;
+}
 .whyus .header h2 {
   font-size: 3rem;
+  margin-block: 25px;
 }
 .whyus .header h2 span {
   color: #1f6df1;
 }
 .whyus .header p {
-  margin-block: 40px;
   color: #737373;
   line-height: 1.8rem;
   font-size: 1.2rem;
@@ -571,7 +606,18 @@ header a {
 }
 .faq .header h2 {
   font-size: 3rem;
-  margin-block: 25px 60px;
+  margin-block: 25px;
+}
+.faq .header h2 span {
+  color: #1f6df1;
+}
+.faq .header p {
+  color: #737373;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+}
+.faq .header {
+  margin-bottom: 60px;
 }
 .faq .faqbox {
   display: flex;
@@ -676,6 +722,8 @@ header a {
   padding: 15px 40px;
   color: white;
   transition-duration: 0.3s;
+  height: inherit;
+  width: inherit;
 }
 .cta .box .left button:hover {
   background-color: #1f6df1;
@@ -752,15 +800,17 @@ footer .copyright form input:focus {
   outline: none;
 }
 footer .copyright form button {
+  margin-top: inherit;
   font-weight: bold;
   font-size: 1.2rem;
   border: none;
   border-radius: 5px;
   background-color: #4285f4;
-  padding-inline: 30px;
-  height: 48px;
+  padding: 0 30px;
   color: white;
   transition-duration: 0.3s;
+  height: 48px;
+  width: inherit;
 }
 footer .copyright form button:hover {
   background-color: #1f6df1;
