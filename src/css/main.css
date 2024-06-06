@@ -1,63 +1,54 @@
 @charset "UTF-8";
 header {
-  display: flex;
+  width: 100%;
   position: fixed;
   top: 0;
-  opacity: 100%;
-  background-color: transparent;
   z-index: 999;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  font-weight: bold;
-  padding: 20px 350px;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
   box-shadow: 0 -25px 50px rgba(0, 0, 0, 0.7);
   transition: top 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
 }
-header.header-hidden {
-  top: -100px;
-  opacity: 0;
-  transition: top 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
+header #header-container {
+  display: flex;
+  opacity: 100%;
+  background-color: transparent;
+  justify-content: space-between;
+  align-items: center;
+  width: 1180px;
+  font-weight: bold;
+  padding-block: 20px;
+  box-sizing: border-box;
 }
-header.header-invert {
-  background-color: #ffffff;
-}
-header.header-invert .logo {
-  filter: invert(1);
-}
-header.header-invert .invert {
-  color: #001726;
-}
-header img {
+header #header-container img {
   height: 35px;
 }
-header nav {
+header #header-container nav {
   display: flex;
   gap: 30px;
 }
-header nav li {
+header #header-container nav li {
   list-style: none;
 }
-header nav li a {
+header #header-container nav li a {
   padding: 10px;
   border-radius: 5px;
   transition-duration: 0.3s;
 }
-header nav li a:hover, header nav li a.invert:hover {
+header #header-container nav li a:hover, header #header-container nav li a.invert:hover {
   color: #1f6df1;
   background-color: rgba(240, 247, 254, 0.05);
 }
-header .other {
+header #header-container .other {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-header .other .support:hover {
+header #header-container .other .support:hover {
   color: #1f6df1;
   transition-duration: 0.3s;
 }
-header .other button {
+header #header-container .other button {
   margin-top: inherit;
   font-weight: bold;
   font-size: 1.2rem;
@@ -70,28 +61,53 @@ header .other button {
   height: inherit;
   width: inherit;
 }
-header .other button:hover {
+header #header-container .other button:hover {
   background-color: #1f6df1;
 }
-header .other .contact {
+header #header-container .other .contact {
   font-size: 1rem;
 }
-header a {
+header #header-container a {
   color: white;
   text-decoration: none;
 }
+header.header-invert {
+  background-color: #ffffff;
+}
+header.header-invert #header-container .logo {
+  filter: invert(1);
+}
+header.header-invert #header-container .invert {
+  color: #001726;
+}
+header.header-hidden {
+  top: -100px;
+  opacity: 0;
+  transition: top 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
+}
 
+@media only screen and (min-width: 750px) {
+  header {
+    padding-inline: 75px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header {
+    padding: 0;
+  }
+}
 .hero {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   background-color: #001726;
   color: white;
-  padding: 0 350px;
 }
 .hero .container {
   display: flex;
   padding-top: 100px;
+  width: 1180px;
 }
 .hero .container .left .subtitle1 {
   background-color: rgba(128, 128, 128, 0.15);
@@ -203,19 +219,14 @@ header a {
   background-color: #1f6df1;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-
 .product {
-  padding-inline: 350px;
+  width: 1180px;
   height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-inline: auto;
 }
 .product .header {
   text-align: center;
@@ -814,4 +825,10 @@ footer .copyright form button {
 }
 footer .copyright form button:hover {
   background-color: #1f6df1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }/*# sourceMappingURL=main.css.map */

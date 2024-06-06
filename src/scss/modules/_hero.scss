@@ -4,14 +4,15 @@
 .hero {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     background-color: color.$bg-color;
     color: white;
-    padding: 0 350px;
 
     .container {
         display: flex;
         padding-top: 100px;
+        width: 1180px;
 
         .left {
             .subtitle1 {

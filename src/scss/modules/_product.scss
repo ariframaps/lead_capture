@@ -1,13 +1,15 @@
-@use 'modules/mixin' as mixin;
-@use 'modules/color' as color;
+@use 'mixin' as mixin;
+@use 'color' as color;
 
 .product {
-    padding-inline: 350px;
+    // padding-inline: 350px;
+    width: 1180px;
     height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-inline: auto;
 
     @include mixin.article-header(center);
 
