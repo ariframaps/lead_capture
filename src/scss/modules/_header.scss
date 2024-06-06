@@ -1,0 +1,113 @@
+@use 'color' as color;
+@use 'mixin' as mixin;
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 -25px 50px rgba(0, 0, 0, 0.7);
+    transition: top 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
+
+    #header-container {
+        display: flex;
+        opacity: 100%;
+        background-color: transparent;
+        justify-content: space-between;
+        align-items: center;
+        width: 1180px;
+        font-weight: bold;
+        padding-block: 20px;
+        box-sizing: border-box;
+
+        img {
+            height: 35px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+
+            li {
+                list-style: none;
+
+                a {
+                    padding: 10px;
+                    border-radius: 5px;
+                    transition-duration: .3s;
+
+                    &:hover,
+                    &.invert:hover {
+                        color: color.$accent-color2;
+                        background-color: rgba(color.$accent-color, $alpha: .05);
+                    }
+                }
+            }
+        }
+
+        .other {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .support:hover {
+                color: color.$accent-color2;
+                transition-duration: .3s;
+            }
+
+            @include mixin.button-style(15px 30px, inherit, inherit, inherit);
+
+            .contact {
+                font-size: 1rem;
+            }
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    &.header-invert {
+        background-color: color.$secondary-color;
+
+        #header-container {
+            .logo {
+                filter: invert(1);
+            }
+
+            .invert {
+                color: color.$bg-color;
+            }
+        }
+
+    }
+
+    &.header-hidden {
+        top: -100px;
+        opacity: 0;
+        transition: top 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    header {
+
+        nav,
+        .other {}
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    header {
+        padding-inline: 75px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header {
+        padding: 0;
+    }
+}
